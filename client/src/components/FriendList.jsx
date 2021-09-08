@@ -3,10 +3,11 @@ import Friend from './Friend'
 import List from '@material-ui/core/List';
 
 const FriendList = ({setCurrentDialog, friendlist}) => {
+    const friends = ['Chel', 'Chel2']
     return(
         <List>
-            {friendlist.map(friend => 
-                <Friend setCurrentDialog={setCurrentDialog} FriendName={friend.name} />)}
+            {friends.map(friend => 
+                <Friend FriendName={friend} />)}
         </List>
     )
 }

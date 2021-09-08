@@ -4,18 +4,15 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 
-const Friend = ({setCurrentDialog, FriendName }) => {
+const Friend = ({ FriendName }) => {
 
-    const dialogClickHandler = (e, name) => {
-        setCurrentDialog(name);
-    } 
 
     return(
-        <ListItem button key={FriendName} onClick={(e) => dialogClickHandler(e, FriendName)} >
+        <ListItem button key={FriendName}>
             <ListItemIcon>
-                <Avatar alt="Remy Sharp">{FriendName[0]}</Avatar>
+                <Avatar alt="Remy Sharp"></Avatar>
             </ListItemIcon>
-            <ListItemText primary={FriendName} />
+            <ListItemText />
             <ListItemText secondary="online" align="right"></ListItemText>
         </ListItem>
     )

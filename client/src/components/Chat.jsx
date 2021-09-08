@@ -32,7 +32,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Chat = ({currentDialog, setCurrentDialog, data }) => {
+const Chat = () => {
   const classes = useStyles();
 
   return (
@@ -50,10 +50,10 @@ const Chat = ({currentDialog, setCurrentDialog, data }) => {
                     <TextField id="outlined-basic-email" label="Search" variant="outlined" fullWidth />
                 </Grid>
                 <Divider />
-                <FriendList setCurrentDialog={setCurrentDialog} friendlist={data.friendlist}/>
+                <FriendList/>
             </Grid>
             <Grid item xs={9}>
-                <MessagesBlock currentDialog={currentDialog} classes={classes} messages={data}/> 
+                <MessagesBlock classes={classes}/> 
                 <MessageInput />
             </Grid>
         </Grid>

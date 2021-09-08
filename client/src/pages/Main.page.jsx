@@ -6,19 +6,10 @@ import axios from 'axios'
 const MainPage = () => {
     const [ logging, setLogging] = useState(false);
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [currentDialog, setCurrentDialog] = useState(null);
 
     
-    useEffect(() => {
-        const data = async () => {
-            const data = await axios.get('http://localhost:3001/api/data');
-            setData(data.data[0]);
-            console.log(data.data)
-            setLoading(false);
-        }
-        data();
-    }, [])
 
     if(logging){
         return <LoginPage setLogging={setLogging} />
